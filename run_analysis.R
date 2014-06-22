@@ -2,7 +2,7 @@ library("plyr")
 
 loadFeatures <- function(){
   # Loading features
-  features <- read.table("./data/features.txt", 
+  features <- read.table("./UCI HAR Dataset/features.txt", 
                          fill=FALSE, 
                          strip.white=TRUE)
   featureLabels <- features[,2]
@@ -11,15 +11,15 @@ loadFeatures <- function(){
 
 generateTrainData <- function(){
   #Loading training data to Xtrain variable. With the column names as featureLabels
-  Xtrain= read.table("./data/train/X_train.txt", 
+  Xtrain= read.table("./UCI HAR Dataset/train/X_train.txt", 
                      fill=FALSE, 
                      strip.white=TRUE,col.names=featureLabels)  
   # Loading activity training data
-  ytrain = read.table("./data/train/y_train.txt", 
+  ytrain = read.table("./UCI HAR Dataset/train/y_train.txt", 
                       fill=FALSE, 
                       strip.white=TRUE)  
   # Loading subject training data
-  subtrain = read.table("./data/train/subject_train.txt", 
+  subtrain = read.table("./UCI HAR Dataset/train/subject_train.txt", 
                         fill=FALSE, 
                         strip.white=TRUE)
   # Appending all three training dataframes(activity, subject and measurements) to one, Xtrain
@@ -30,15 +30,15 @@ generateTrainData <- function(){
 
 generateTestData <- function(){
   #Loading test data to Xtest variable. With the column names as featureLabels
-  Xtest= read.table("./data/test/X_test.txt", 
+  Xtest= read.table("./UCI HAR Dataset/test/X_test.txt", 
                     fill=FALSE, 
                     strip.white=TRUE,col.names=featureLabels)
   # Loading activity training data
-  ytest = read.table("./data/test/y_test.txt", 
+  ytest = read.table("./UCI HAR Dataset/test/y_test.txt", 
                      fill=FALSE, 
                      strip.white=TRUE)
   #Loading subject test data
-  subtest = read.table("./data/test/subject_test.txt", 
+  subtest = read.table("./UCI HAR Dataset/test/subject_test.txt", 
                        fill=FALSE, 
                        strip.white=TRUE)
   # Append all three test datasets to one dataframe, Xtest
@@ -76,7 +76,7 @@ describeFeatures <- function(featureNames){
 }
 
 generateActivityData <- function(){
-  activities <- read.table("./data/activity_labels.txt", 
+  activities <- read.table("./UCI HAR Dataset/activity_labels.txt", 
                            fill=FALSE, 
                            strip.white=TRUE,col.names=c("activityid","activity_name"))
   activities

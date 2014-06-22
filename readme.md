@@ -4,17 +4,17 @@ Human Activity Recognition Using Smartphones Data Set
 This project contains an R script called run_analysis.R. This script reads the dataset placed in project root directory, performs cleaning and creates a new tidy dataset. The data is downloaded from the below location:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-It is expected that the data is downloaded from the above link and extracted to a folder "data". 
+It is expected that the data is downloaded from the above link and extracted to a folder "UCI HAR Dataset". 
 This folder should be present in the same location as "run_analysis.R". 
 
 ```
 The directory structure for the project is as follows:
 run_analysis.R
-  - data
-	- data/test:
-	- data/test/Inertial Signals
-	- data/train:
-	- data/train/Inertial Signals
+  - UCI HAR Dataset
+	- UCI HAR Dataset/test:
+	- UCI HAR Dataset/test/Inertial Signals
+	- UCI HAR Dataset/train:
+	- UCI HAR Dataset/train/Inertial Signals
 ```
 
 #### Steps to execute:
